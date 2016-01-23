@@ -39,7 +39,7 @@ cacheSolve <- function(x, ...) {
         return(i) #returns previously calculated inverse
     }
     data <- x$get() #get the original matrix
-    i <- solve(x) #calculate inverse
+    i <- solve(x,...) #calculate inverse
     x$setinverse(i) #cache calculated inverse for later use
     i #returns the inverse of x
 }
